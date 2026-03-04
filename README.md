@@ -1,68 +1,36 @@
-# ⚡ Benchmark Canvas JS 2025
+# Benchmark Canvas JS
 
 Comparatif interactif des principales librairies JavaScript Canvas : **Fabric.js**, **Konva.js**, **PixiJS**, **Paper.js** et **p5.js**.
 
-## 🚀 Déploiement sur GitHub Pages
+**[Voir le benchmark en ligne](https://elouanb7.github.io/benchmark-canvas-js/)**
 
-### 1. Créer le repo
+## Contenu
 
-```bash
-git init
-git add .
-git commit -m "initial commit"
-gh repo create canvas-benchmark --public --push --source=.
-```
+- **Vue d'ensemble** — Carte de chaque librairie avec stats, tags, pros/cons
+- **Performance FPS** — Benchmark de 8 000 objets animés sur Chrome, Firefox et Safari
+- **Matrice features** — Tableau comparatif (TypeScript, React, SVG parser, etc.)
+- **Recommandations** — Quelle lib choisir selon votre use case + arbre de decision
 
-### 2. Configurer GitHub Pages
+## Stack
 
-1. Va dans **Settings → Pages** de ton repo
-2. Source : **GitHub Actions**
-3. Le workflow `.github/workflows/deploy.yml` se lance automatiquement au push
+- React 19 + Vite 7
+- CSS custom properties (theme clair/sombre automatique)
+- Deploy via GitHub Actions sur GitHub Pages
 
-### 3. Personnaliser
-
-Avant de déployer, pense à modifier :
-
-- **`vite.config.js`** → Change `base: '/canvas-benchmark/'` par le nom de ton repo si différent
-- **`index.html`** → Remplace les URLs `elouan.github.io/canvas-benchmark/` par les tiennes
-- **`src/App.jsx`** → Recherche les `TODO:` pour mettre tes vrais liens (email, GitHub, Twitter)
-- **`public/og-image.png`** → Ajoute une image OG pour le partage social (1200x630px recommandé)
-
-### 4. Dev local
-
-```bash
-npm install
-npm run dev
-```
-
-### 5. Build
-
-```bash
-npm run build
-npm run preview
-```
-
-## 📁 Structure
-
-```
-├── .github/workflows/deploy.yml  # CI/CD GitHub Pages
-├── index.html                     # SEO, Open Graph, Structured Data
-├── public/favicon.svg             # Favicon
-├── src/
-│   ├── main.jsx                   # Entry point
-│   ├── index.css                  # Global styles
-│   ├── App.jsx                    # Composant principal
-│   └── data.js                    # Données des librairies
-└── vite.config.js                 # Config Vite + base path
-```
-
-## 📊 Sources des données
+## Sources des donnees
 
 - **Performance FPS** : [canvas-engines-comparison](https://github.com/slaylines/canvas-engines-comparison) (MacBook Pro 2019, 8k boxes)
 - **Downloads / Stars** : [npm trends](https://npmtrends.com/fabric-vs-konva-vs-pixi.js), [Best of JS](https://bestofjs.org)
 - **Bundle sizes** : [Bundlephobia](https://bundlephobia.com)
 - **Features** : Documentation officielle de chaque librairie
 
-## 📄 Licence
+## Dev local
+
+```bash
+npm install
+npm run dev
+```
+
+## Licence
 
 MIT
