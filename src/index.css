@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Dark Theme (default) ─── */
+:root,
+[data-theme="dark"] {
+  --bg-page: linear-gradient(160deg, #08080d 0%, #0f0f1a 40%, #0a0a12 100%);
+  --bg-body: #08080d;
+  --bg-card: rgba(255,255,255,0.02);
+  --bg-card-hover: rgba(255,255,255,0.035);
+  --bg-card-expanded: 08;
+  --bg-table-header: #0c0c15;
+  --bg-table-row-even: rgba(255,255,255,0.012);
+  --bg-table-row-even-sticky: #0e0e18;
+  --bg-table-row-odd-sticky: #0c0c15;
+  --bg-input: rgba(255,255,255,0.05);
+  --bg-overlay-subtle: rgba(255,255,255,0.02);
+  --bg-overlay-medium: rgba(255,255,255,0.04);
+  --bg-overlay-hover: rgba(255,255,255,0.03);
+  --bg-tab: rgba(255,255,255,0.02);
+  --bg-tab-hover: rgba(255,255,255,0.05);
+  --bg-tab-active: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+  --bg-ghost-hover: rgba(255,255,255,0.04);
+
+  --text-primary: #e8e6f0;
+  --text-secondary: #b0b0c8;
+  --text-tertiary: #6a6a8a;
+  --text-muted: #7a7a9a;
+  --text-subtle: #555;
+  --text-very-subtle: #444;
+  --text-heading: #e8e6f0;
+  --text-heading-alt: #d0d0e4;
+  --text-mono: #d0d0e4;
+  --text-stat: #9a9ab0;
+  --text-meta: #8a8aa0;
+  --text-link-footer: #6a6a8a;
+  --text-link-method: #6a9fdb;
+  --text-tab: #7a7a9a;
+  --text-tab-hover: #c0c0d8;
+  --text-ghost: #d0d0e4;
+  --text-card-action: #555;
+
+  --border-subtle: rgba(255,255,255,0.05);
+  --border-card: rgba(255,255,255,0.06);
+  --border-card-hover: rgba(255,255,255,0.12);
+  --border-table-header: rgba(255,255,255,0.08);
+  --border-table-row: rgba(255,255,255,0.04);
+  --border-tab: rgba(255,255,255,0.05);
+  --border-tab-active: rgba(255,255,255,0.15);
+  --border-ghost: rgba(255,255,255,0.12);
+  --border-ghost-hover: rgba(255,255,255,0.25);
+
+  --hero-title-gradient: linear-gradient(90deg, #fff 0%, #a0a0c0 100%);
+
+  --grain-opacity: 0.03;
+  --check-fail: #333;
+
+  --scrollbar-thumb: rgba(255,255,255,0.1);
+  --scrollbar-thumb-hover: rgba(255,255,255,0.2);
+}
+
+/* ─── Light Theme ─── */
+[data-theme="light"] {
+  --bg-page: linear-gradient(160deg, #f5f4f8 0%, #eeedf5 40%, #f8f7fc 100%);
+  --bg-body: #f5f4f8;
+  --bg-card: rgba(0,0,0,0.025);
+  --bg-card-hover: rgba(0,0,0,0.045);
+  --bg-card-expanded: 0a;
+  --bg-table-header: #eeedf2;
+  --bg-table-row-even: rgba(0,0,0,0.02);
+  --bg-table-row-even-sticky: #e8e7ec;
+  --bg-table-row-odd-sticky: #eeedf2;
+  --bg-input: rgba(0,0,0,0.05);
+  --bg-overlay-subtle: rgba(0,0,0,0.02);
+  --bg-overlay-medium: rgba(0,0,0,0.04);
+  --bg-overlay-hover: rgba(0,0,0,0.03);
+  --bg-tab: rgba(0,0,0,0.03);
+  --bg-tab-hover: rgba(0,0,0,0.06);
+  --bg-tab-active: linear-gradient(135deg, rgba(0,0,0,0.08), rgba(0,0,0,0.03));
+  --bg-ghost-hover: rgba(0,0,0,0.04);
+
+  --text-primary: #1a1a2e;
+  --text-secondary: #5a5a74;
+  --text-tertiary: #8a8a9e;
+  --text-muted: #7a7a90;
+  --text-subtle: #a0a0b4;
+  --text-very-subtle: #b0b0c0;
+  --text-heading: #1a1a2e;
+  --text-heading-alt: #2d2d4a;
+  --text-mono: #2d2d4a;
+  --text-stat: #5a5a74;
+  --text-meta: #6a6a80;
+  --text-link-footer: #7a7a90;
+  --text-link-method: #3a7ac0;
+  --text-tab: #6a6a80;
+  --text-tab-hover: #3a3a50;
+  --text-ghost: #3a3a50;
+  --text-card-action: #a0a0b4;
+
+  --border-subtle: rgba(0,0,0,0.06);
+  --border-card: rgba(0,0,0,0.08);
+  --border-card-hover: rgba(0,0,0,0.15);
+  --border-table-header: rgba(0,0,0,0.1);
+  --border-table-row: rgba(0,0,0,0.05);
+  --border-tab: rgba(0,0,0,0.06);
+  --border-tab-active: rgba(0,0,0,0.18);
+  --border-ghost: rgba(0,0,0,0.12);
+  --border-ghost-hover: rgba(0,0,0,0.25);
+
+  --hero-title-gradient: linear-gradient(90deg, #1a1a2e 0%, #5a5a74 100%);
+
+  --grain-opacity: 0.015;
+  --check-fail: #ccc;
+
+  --scrollbar-thumb: rgba(0,0,0,0.1);
+  --scrollbar-thumb-hover: rgba(0,0,0,0.2);
+}
+
+body {
+  font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+::selection {
+  background: rgba(231, 76, 60, 0.3);
+  color: #fff;
+}
